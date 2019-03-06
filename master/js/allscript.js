@@ -1,9 +1,19 @@
 /* Stage- Bootstrap one page Event ticket booking theme 
 Created by pixpalette.com - online design magazine */
 
+
 $(window).load(function() {
 	// Animate loader off screen
-	$(".loader").fadeOut("slow");;
+    $(".loader").fadeOut("slow");
+    
+
+    //replace main image with querystring args
+    var urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('photo')){
+        var photo = urlParams.get('photo');
+        console.log('loading photo', photo)
+        $(".event-banner-wrapper").css("background-image", "url(images/" + photo + ".jpg)");
+    }
 });
 
 //Ticket count and price minus and plus
