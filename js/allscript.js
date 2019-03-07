@@ -12,7 +12,7 @@ $(window).load(function() {
     if(urlParams.has('photo')){
         var photo = urlParams.get('photo');
         console.log('loading photo', photo)
-        $(".event-banner-wrapper").css("background-image", "url(images/" + photo + ".jpg)");
+        $(".event-banner-wrapper").css("background-image", "url(images/" + photo + ".JPG)");
     }
 });
 
